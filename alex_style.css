@@ -1,0 +1,256 @@
+:root {
+  --black: #313131;
+  --blue: #0F6DBE;
+  --gray: #F7F8FB;
+  --lightblue: #F5F9FC;
+}
+*, *:before, *:after {box-sizing:border-box;}
+html {
+  -webkit-touch-callout:none;
+  touch-action:manipulation;
+  -ms-touch-action:manipulation;
+  -webkit-text-size-adjust:100%;
+  margin:0; padding:0;
+  -webkit-font-smoothing:antialiased;
+}
+main {
+  display:flex; flex-flow:column nowrap; width:100%; overflow-x:hidden;
+  justify-content:flex-start; align-items:flex-start;
+  padding:3rem 0.9375rem;
+  color:var(--black);
+}
+  main>div{display:flex; flex-flow:column nowrap; margin:0 0 1.5rem;}
+  main .button {max-width:unset;}
+  main p {max-width:500px; font-weight:normal;}
+  main p.reference {max-width:unset;}
+  main p>a, main p>a:focus {font-weight:700;}
+
+  main .banner-content .page-category { padding-left:70px; position:relative; font-size:1.125rem; font-weight:bold;}
+  main .banner-content .page-category:before { display:block; position:absolute; width:60px; height:2px; content:''; background-color:var(--black); left:0; margin-top:12px;}
+
+  main .step { padding:0 0 1rem 5rem; position:relative; font-size:1.125rem; font-weight:bold;}
+  main .step h2 {margin-top:12px;}
+  main .step h2:after { display:block; content:''; margin-top:1rem; width:67px; height:2px; background-color:var(--blue);}
+  main .step:before { display:flex; justify-content:center; align-items:center; position:absolute; width:60px; height:60px; content:'1'; background-color:var(--gray); color:var(--blue); border-radius:50%; left:0; top:-12px;}
+  main .step.two:before { content:'2';}
+  main .step.three:before { content:'3';}
+
+  main .promo {background:var(--gray); width:100%; border-radius:20px; padding:3rem 2rem 2rem; margin:1rem 0;}
+  main .promo p {max-width:unset;}
+  main .promo.blue {background:var(--lightblue); align-items:center; text-align:center; margin-bottom:2rem;}
+
+  .alexBanner {
+    background:url('src/bcbs-retail-hero-3.jpg') no-repeat top right 25%;
+    background-size:cover; width:100%;
+    color:white;
+    margin:0; padding:4rem 0.9375rem;
+  }
+    .alexBanner h1, .alexBanner h4 {color:white;}
+    .alexBanner h4 {max-width:500px;}
+    .alexBanner a.button {background:white; color:var(--blue); border-color:white; margin-top:1rem;}
+      .alexBanner a.button:hover {background:none; color:white; border-color:white;}
+    .alexBanner .page-category {color:white; padding-left:70px; position:relative; font-size:1.125rem; font-weight:bold;}
+      .alexBanner .page-category:before {display:block; position:absolute; width:60px; height:2px; content:''; background-color:white; left:0; margin-top:12px;}
+
+  .process {
+    display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:flex-start;
+  }
+    .process .special-enrollment {
+      display:none; flex-flow:column nowrap; justify-content:center; align-items:center; text-align:center;
+      background:var(--gray);
+      padding:2rem 2rem 4rem; border-radius:17px; margin:0 1rem 0 0; flex-basis:50%;
+    }
+    .process .special-enrollment img {max-width:160px; margin:2rem auto 2rem;}
+    .process .special-enrollment p {margin-bottom:1rem;}
+
+  .cards {
+    display:flex; flex-flow:column wrap; justify-content:flex-start;
+    width:100%;
+    padding:0 0.9375rem; margin:2rem 0 0;
+  }
+    .cards .card {
+      flex-basis:100%;
+      border-radius:17px;
+      padding:2rem; margin:0 0 1rem !important;
+      display:flex; flex-flow:column wrap; justify-content:center; text-align:center; align-items:center;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+    .cards .card p {
+      margin:0 0 0.5rem;
+      transition: margin-bottom .15s cubic-bezier(0, 0, 0.29, 0.95) 0s;
+    }
+    .cards .card h2 {
+      margin:0 0 1rem;
+    }
+
+  .get_plan {
+    display:flex; flex-flow:column wrap; justify-content:center; align-items:center;
+    width:100%; background:var(--gray);
+    padding:4rem 0.9375rem; margin:1rem 0 3rem;
+    border-radius:17px;
+  }
+    .get_plan h2 {width:100%; text-align:center;}
+    .get_plan img {max-width:70px; margin:0 0 1rem;}
+    .get_plan ul {
+      display:flex; flex-flow:column wrap; justify-content:flex-start;
+      width:100%;
+      padding:0; margin:0 0 2rem;
+    }
+      .get_plan ul li {
+        flex-basis:100%;
+        border-radius:17px;
+        padding:3rem 2rem 0; margin:0;
+        display:flex; flex-flow:column wrap; justify-content:flex-start; text-align:center; align-items:center;
+      }
+
+  .resources {
+    display:flex; flex-flow:column wrap; justify-content:center; align-items:center;
+    width:100%;
+    padding:1rem 0 0; margin:2rem 0 1rem;
+  }
+  .resources h2, .resources p {width:100%; text-align:center;}
+  .resources p {margin:0;}
+  .accordion {
+  	width:100%;
+  	margin:0;
+  	padding: 0;
+  	list-style: none;
+  }
+  	.accordion-item {
+  		border-bottom: 1px solid var(--blue) !important;
+  	}
+  	.accordion-item a {
+  		text-decoration:underline;
+  	}
+  	.accordion-item a:hover {
+  		color:var(--black);
+  	}
+  		.accordion-item:last-of-type {
+  			border-bottom: none;
+  		}
+  	.accordion-thumb {
+  		margin: 0;
+  		padding: 0.5rem 5px 1rem;
+  		cursor: pointer;
+  		display: flex;
+  		text-align:left;
+  	}
+  		.accordion-thumb:hover {
+  			color:var(--blue);
+  		}
+  		.accordion-thumb::after {
+  			margin-top:7px;
+  			max-width:25px;
+  			margin-right: 0;
+  			width:25px;
+  			height:13px;
+  			-webkit-transition: -webkit-transform .3s;
+  			transition: -webkit-transform .3s;
+  			transition: transform .3s;
+  			transition: transform .3s, -webkit-transform .3s;
+  			content: '';
+  			background: url(src/chevron-blue.svg) no-repeat;
+  			background-size:13px;
+  			background-position:center;
+  			display: inline-block;
+  			margin-left: auto;
+  			-webkit-transform: rotate(-90deg);
+  			transform: rotate(-90deg);
+  		}
+
+  	.accordion-panel {
+  		margin: 0;
+  		padding:0 1rem 1rem 5px;
+  		display: none;
+  		text-align: left;
+  		align-items: flex-start;
+  	}
+  		.accordion-panel p {
+  			margin: 0 0 1rem;
+  			padding: 10px 0 0;
+  			text-align:left;
+        max-width:80%;
+        font-size:1rem !important;
+  		}
+  		.accordion-item.is-active .accordion-thumb::after {
+  			-webkit-transform: rotate(0deg);
+  			transform: rotate(0deg);
+  		}
+      .accordion-panel a.button {text-decoration:none;}
+
+.faux_feedback {
+  background:var(--blue); color:white;
+  position:fixed; top:45%; right:-47px;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: normal;
+  padding:.1rem 2rem;
+  cursor:default;
+}
+
+  @media (min-width:768px) {
+    .alexBanner {padding:4rem 0.9375rem 6rem;}
+    .process .special-enrollment {display:flex;}
+    .get_plan {background:none; padding:2rem 0.9375rem; margin:1rem 0 0;}
+    .cards, .get_plan ul {
+      flex-flow:row nowrap; justify-content:space-between;
+      margin:-2rem auto 0; min-height:200px;
+      align-self:flex-end; justify-self:flex-end;
+    }
+      .cards .card, .get_plan ul li {
+        flex-basis:32%;
+        position:relative;
+        top:0;
+        padding:3rem 2rem; margin:0 0 1rem;
+      }
+      .cards .card h2 {margin:0 0 1.5rem;}
+      .get_plan ul li {
+        margin:0;
+      }
+      .get_plan ul li p {
+        margin:0;
+      }
+  }
+  /* hover effects for the cards in the masthead */
+  @media (min-width:768px) and (hover:hover) {
+    .cards .card {
+      transition: top .15s cubic-bezier(0, 0, 0.29, 0.95) 0s, padding .30s cubic-bezier(0, 0, 0.29, 0.95) 0s;
+      top:0;
+    }
+    .cards .card:hover {
+      top:-2rem; padding-bottom:3rem;
+    }
+    .cards .card:hover p {
+      margin:0 0 1.5rem;
+    }
+  }
+  /* one of the breakpoints from what I can tell */
+  @media (min-width:1012px) {
+    .alexBanner {
+      background:url('src/bcbs-retail-hero-3.jpg') no-repeat top 10% center;
+      background-size:cover;
+      /* margin:-101px 0 0; */
+      margin:-61px 0 0;
+      padding:12rem 0.9375rem 16rem;
+    }
+    main {padding:3rem 0;}
+    .process .special-enrollment {
+      margin:0 3rem 0 0;
+    }
+    .cards {margin-top:-10rem; padding:0;}
+    .resources {padding:0;}
+  }
+  @media (min-width:1600px) {
+    .alexBanner {
+      background:url('src/bcbs-retail-hero-3.jpg') no-repeat top 25% center;
+      background-size:cover;
+      padding:14rem 0.9375rem 14rem;
+    }
+    .cards {
+      margin-top:-6rem;
+    }
+  }
